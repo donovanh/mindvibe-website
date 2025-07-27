@@ -4,7 +4,7 @@ module.exports = {
 	url: "https://mindvibe.hop.ie/",
 	language: "en",
 	description:
-		"Transform your iPhone into a gateway to calm with MindVibe - the meditation app that uses color psychology.",
+		"Transform your iPhone into a gateway to calm with MindVibe - the meditation app that uses color.",
 	author: {
 		name: "Donovan Hutchinson",
 		email: "mindvibe@hop.ie",

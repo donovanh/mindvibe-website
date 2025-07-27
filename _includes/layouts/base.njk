@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>{{title}} - {{ metadata.title }}</title>
+		<title>{% if title and title != metadata.title %}{{ title }} - {{ metadata.title }}{% else %}{{ metadata.title }} - Meditation App Using Color{% endif %}</title>
 		<meta name="description" content="{{ description or metadata.description }}">
 		<meta name="author" content="{{ metadata.author.name }}">
 		<meta name="theme-color" content="#667eea">
@@ -28,6 +28,32 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 		<meta name="apple-mobile-web-app-title" content="{{ metadata.title }}">
+		
+		<!-- Structured Data -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "MobileApplication",
+			"name": "{{ metadata.title }}",
+			"description": "{{ metadata.description }}",
+			"url": "{{ metadata.url }}",
+			"applicationCategory": "HealthApplication",
+			"operatingSystem": "iOS",
+			"offers": {
+				"@type": "Offer",
+				"price": "0",
+				"priceCurrency": "USD"
+			},
+			"author": {
+				"@type": "Person",
+				"name": "{{ metadata.author.name }}",
+				"email": "{{ metadata.author.email }}",
+				"url": "{{ metadata.author.url }}"
+			},
+			"keywords": "meditation, mindfulness, color psychology, relaxation, mental health, wellness, iPhone app",
+			"screenshot": "{{ metadata.url }}/img/main-app.png"
+		}
+		</script>
 
 		{#- Atom and JSON feeds included by default #}
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
