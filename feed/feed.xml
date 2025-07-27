@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="en">
+	<title>MindVibe</title>
+	<subtitle>Transform your iPhone into a gateway to calm with MindVibe - the meditation app that uses color.</subtitle>
+	<link href="https://mindvibe.hop.ie/feed/feed.xml" rel="self"/>
+	<link href="https://mindvibe.hop.ie/"/>
+	<updated>2025-07-27T15:49:52Z</updated>
+	<id>https://mindvibe.hop.ie/</id>
+	<author>
+		<name>Donovan Hutchinson</name>
+		<email>mindvibe@hop.ie</email>
+	</author>
+</feed>

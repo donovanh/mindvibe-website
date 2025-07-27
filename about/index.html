@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>About MindVibe - MindVibe</title>
+		<meta name="description" content="Transform your iPhone into a gateway to calm with MindVibe - the meditation app that uses color.">
+		<meta name="author" content="Donovan Hutchinson">
+		<meta name="theme-color" content="#667eea">
+		<link rel="canonical" href="https://mindvibe.hop.ie//about/">
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://mindvibe.hop.ie//about/">
+		<meta property="og:title" content="About MindVibe">
+		<meta property="og:description" content="Transform your iPhone into a gateway to calm with MindVibe - the meditation app that uses color.">
+		<meta property="og:image" content="https://mindvibe.hop.ie//img/main-app.png">
+		<meta property="og:site_name" content="MindVibe">
+		
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image">
+		<meta property="twitter:url" content="https://mindvibe.hop.ie//about/">
+		<meta property="twitter:title" content="About MindVibe">
+		<meta property="twitter:description" content="Transform your iPhone into a gateway to calm with MindVibe - the meditation app that uses color.">
+		<meta property="twitter:image" content="https://mindvibe.hop.ie//img/main-app.png">
+		
+		<!-- iOS Web App -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="apple-mobile-web-app-title" content="MindVibe">
+		
+		<!-- Structured Data -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "MobileApplication",
+			"name": "MindVibe",
+			"description": "Transform your iPhone into a gateway to calm with MindVibe - the meditation app that uses color.",
+			"url": "https://mindvibe.hop.ie/",
+			"applicationCategory": "HealthApplication",
+			"operatingSystem": "iOS",
+			"offers": {
+				"@type": "Offer",
+				"price": "0",
+				"priceCurrency": "USD"
+			},
+			"author": {
+				"@type": "Person",
+				"name": "Donovan Hutchinson",
+				"email": "mindvibe@hop.ie",
+				"url": "https://mindvibe.hop.ie"
+			},
+			"keywords": "meditation, mindfulness, color psychology, relaxation, mental health, wellness, iPhone app",
+			"screenshot": "https://mindvibe.hop.ie//img/main-app.png"
+		}
+		</script>
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="MindVibe">
+		<link rel="alternate" href="/feed/feed.json" type="application/json" title="MindVibe">
+		
+		<style>* { box-sizing: border-box; }
+/* Defaults */
+:root {
+	--font-family: -apple-system, system-ui, sans-serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono,
+		Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono,
+		Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New,
+		Courier, monospace;
+}
+
+/* Theme colors - Meditation App */
+:root {
+	--color-primary: #6366f1; /* Calming indigo */
+	--color-secondary: #8b5cf6; /* Peaceful violet */
+	--color-accent: #06b6d4; /* Refreshing cyan */
+	--color-warm: #f59e0b; /* Energizing amber */
+	--color-success: #10b981; /* Nature green */
+	--color-gray-100: #f8fafc;
+	--color-gray-200: #e2e8f0;
+	--color-gray-300: #cbd5e1;
+	--color-gray-600: #475569;
+	--color-gray-800: #1e293b;
+	--color-gray-900: #0f172a;
+
+	--background-color: var(--color-gray-100);
+	--background-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+	--text-color: var(--color-gray-800);
+	--text-color-light: var(--color-gray-600);
+	--text-color-link: var(--color-primary);
+	--text-color-link-active: var(--color-secondary);
+	--text-color-link-visited: var(--color-secondary);
+
+	--syntax-tab-size: 2;
+	--border-radius: 16px;
+	--shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+		0 2px 4px -1px rgba(0, 0, 0, 0.06);
+	--shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+		0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+/*
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-gray-20: #e0e0e0;
+        --color-gray-50: #c0c0c0;
+        --color-gray-90: #dad8d8;
+
+        --text-color-link: var(--color-highlight);
+        --text-color-link-active: #6969f7;
+        --text-color-link-visited: #a6a6f8;
+
+        --background-color: #15202b;
+    }
+} */
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: white;
+	background: var(--background-gradient);
+	min-height: 100vh;
+	line-height: 1.6;
+}
+html {
+	overflow-y: scroll;
+}
+main {
+	max-width: 60em;
+	margin: 0 auto;
+	min-height: calc(100vh - 18em);
+}
+
+.post-content {
+	max-width: 40em;
+	margin: 0 auto;
+}
+
+.post-list {
+	max-width: 40em;
+	margin: 0 auto;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: rgba(255, 255, 255, 0.9);
+	text-decoration: none;
+}
+a[href]:visited {
+	color: rgba(255, 255, 255, 0.8);
+}
+a[href]:hover,
+a[href]:active {
+	text-decoration: underline;
+	color: white;
+}
+
+main {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+main img {
+	height: auto;
+	max-width: 100%;
+	border-radius: 8px;
+}
+
+.links-nextprev {
+	list-style: none;
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: 0.5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em 0.5em;
+	flex-wrap: wrap;
+	align-items: center;
+	padding: 2em 1em 1em;
+	max-width: 60em;
+	margin: 0 auto;
+}
+.home-link {
+	margin-right: auto;
+	font-size: 1.5em;
+	font-weight: 600;
+	color: white;
+	text-decoration: none;
+	transition: color 0.3s ease;
+	display: flex;
+	align-items: center;
+	gap: 0.5em;
+}
+.home-link:hover {
+	color: rgba(255, 255, 255, 0.8);
+}
+.brain-icon {
+	width: 1.2em;
+	height: 1.2em;
+	color: white;
+	transition: transform 0.3s ease;
+}
+.home-link:hover .brain-icon {
+	transform: scale(1.1);
+}
+.logo-text {
+	display: inline-block;
+}
+.home-link img {
+	width: 272px;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	padding: 0;
+	margin: 0 0 0 auto;
+	list-style: none;
+	flex-wrap: wrap;
+}
+.nav-item {
+	display: inline-block;
+	margin-right: 1em;
+}
+.nav-item:last-child {
+	margin-right: 0;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Direct Links / Markdown Headers */
+.header-anchor {
+	text-decoration: none;
+	font-style: normal;
+	font-size: 1em;
+	margin-left: 0.1em;
+}
+a[href].header-anchor,
+a[href].header-anchor:visited {
+	color: transparent;
+}
+a[href].header-anchor:focus,
+a[href].header-anchor:hover {
+	text-decoration: underline;
+}
+a[href].header-anchor:focus,
+:hover > a[href].header-anchor {
+	color: #aaa;
+}
+
+h2 + .header-anchor {
+	font-size: 1.5em;
+}
+
+.testflight-callout {
+	border: 2px solid rgba(255, 255, 255, 0.3);
+	border-radius: var(--border-radius);
+	background: rgba(255, 255, 255, 0.1);
+	padding: 2em;
+	text-align: center;
+	backdrop-filter: blur(10px);
+	transition: transform 0.3s ease, background 0.3s ease;
+}
+.testflight-callout:hover {
+	transform: translateY(-2px);
+	background: rgba(255, 255, 255, 0.15);
+}
+.testflight-callout a {
+	font-weight: 600;
+	font-size: 1.1em;
+	color: white;
+	text-decoration: none;
+	padding: 0.75em 1.5em;
+	border-radius: 50px;
+	background: rgba(255, 255, 255, 0.2);
+	display: inline-block;
+	transition: all 0.3s ease;
+	backdrop-filter: blur(10px);
+}
+.testflight-callout a:hover {
+	transform: scale(1.05);
+	background: rgba(255, 255, 255, 0.3);
+}
+
+/* Home page */
+.home-layout {
+	display: flex;
+	align-items: start;
+	gap: 3em;
+	margin: 1rem auto;
+	padding: 2em;
+}
+
+.home-layout h1 {
+	font-size: 3.5em;
+	margin: 0 0 0.5em 0;
+	color: white;
+	font-weight: 700;
+	line-height: 1.1;
+}
+.home-content h1 {
+	font-size: 3em;
+	margin: 0 0 0.5em 0;
+	color: white;
+	font-weight: 700;
+	line-height: 1.1;
+}
+.home-layout h2 {
+	color: white;
+	font-size: 2em;
+	margin: 1.5em 0 0.75em 0;
+	font-weight: 600;
+}
+.home-layout h3 {
+	color: white;
+	font-size: 1.3em;
+	margin: 2em 0 0.75em 0;
+	font-weight: 600;
+}
+
+.home-image {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5em;
+	flex-shrink: 0;
+	width: 300px;
+}
+.home-image img {
+	width: 100%;
+	height: auto;
+	border-radius: var(--border-radius);
+	box-shadow: var(--shadow-medium);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	border: 2px solid rgba(255, 255, 255, 0.3);
+}
+.home-image img:hover {
+	transform: translateY(-5px) scale(1.02);
+	box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3),
+		0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.home-content {
+	padding: 1em 0;
+	flex: 1;
+}
+.home-content p {
+	color: rgba(255, 255, 255, 0.9);
+	font-size: 1.1em;
+	line-height: 1.7;
+	margin-bottom: 1.5em;
+}
+.home-content ul {
+	list-style: none;
+	padding: 0;
+}
+.home-content li {
+	padding: 0.75em 0 0.75em 1.5em;
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+	margin-bottom: 1em;
+	color: rgba(255, 255, 255, 0.95);
+	transition: all 0.3s ease;
+}
+.home-content li:hover {
+	border-left-color: white;
+	transform: translateX(5px);
+	color: white;
+}
+
+/* Tablet styles */
+@media (max-width: 1024px) {
+	.home-layout {
+		flex-direction: column;
+		gap: 2em;
+	}
+	.home-image {
+		order: 1;
+		flex-direction: row;
+		justify-content: center;
+		width: 100%;
+		gap: 1em;
+	}
+	.home-image img {
+		max-width: 200px;
+	}
+	.home-content {
+		order: 2;
+	}
+}
+
+/* Mobile styles */
+@media (max-width: 720px) {
+	header {
+		padding: 1em;
+		flex-direction: column;
+		gap: 1em;
+		text-align: center;
+	}
+	.home-link {
+		margin-right: 0;
+		font-size: 1.75em;
+		justify-content: center;
+	}
+	.brain-icon {
+		width: 1.1em;
+		height: 1.1em;
+	}
+	.nav {
+		margin: 0;
+		justify-content: center;
+	}
+	.home-layout {
+		position: relative;
+		flex-direction: column;
+		gap: 1.5em;
+		padding: 1em;
+	}
+	.home-image {
+		position: absolute;
+		top: 0;
+		right: 1em;
+		width: 120px;
+		z-index: 1;
+		flex-direction: column;
+		gap: 0;
+		opacity: 0.3;
+	}
+	.home-image img {
+		width: 100%;
+		max-width: 120px;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+	}
+	.home-image img:nth-child(2),
+	.home-image img:nth-child(3) {
+		display: none;
+	}
+	.home-content {
+		order: 2;
+		padding: 0;
+		position: relative;
+		z-index: 2;
+	}
+	.home-content h1 {
+		font-size: 2.25em;
+		text-align: center;
+		margin-bottom: 1em;
+		padding-right: 0;
+		width: 100%;
+	}
+	.home-layout h1 {
+		font-size: 2.25em;
+		text-align: center;
+		margin-bottom: 1em;
+		padding-right: 140px;
+	}
+	.home-layout h2 {
+		font-size: 1.5em;
+		text-align: center;
+		margin-top: 2em;
+	}
+	.home-layout h3 {
+		font-size: 1.2em;
+	}
+	.home-content p {
+		font-size: 1em;
+		text-align: left;
+	}
+	.home-content li {
+		padding: 0.5em 0 0.5em 1em;
+		margin-bottom: 0.75em;
+		font-size: 0.95em;
+	}
+	.testflight-callout {
+		padding: 1.5em 1em;
+		margin: 1em 0;
+	}
+	.testflight-callout a {
+		padding: 0.75em 1.25em;
+		font-size: 1em;
+		display: block;
+		margin-top: 1em;
+	}
+	footer {
+		padding: 2em 1em;
+	}
+}
+
+/* Small mobile styles */
+@media (max-width: 480px) {
+	header {
+		padding: 0.75em;
+	}
+	.home-link {
+		font-size: 1.5em;
+		justify-content: center;
+	}
+	.brain-icon {
+		width: 1em;
+		height: 1em;
+	}
+	.home-layout {
+		padding: 0.75em;
+		gap: 1em;
+	}
+	.home-image {
+		width: 100px;
+		right: 0.5em;
+		top: -0.5em;
+	}
+	.home-image img {
+		max-width: 100px;
+	}
+	.home-content h1 {
+		font-size: 1.85em;
+		line-height: 1.2;
+		padding-right: 0;
+		width: 100%;
+		text-align: center;
+	}
+	.home-layout h1 {
+		font-size: 1.85em;
+		line-height: 1.2;
+	}
+	.home-layout h2 {
+		font-size: 1.3em;
+	}
+	.home-layout h3 {
+		font-size: 1.1em;
+	}
+	.home-content p {
+		font-size: 0.95em;
+	}
+	.home-content li {
+		font-size: 0.9em;
+		padding-left: 0.75em;
+	}
+	.testflight-callout {
+		padding: 1.25em 0.75em;
+	}
+}
+
+footer {
+	color: rgba(255, 255, 255, 0.8);
+	display: flex;
+	justify-content: center;
+	padding: 3em 1em;
+	margin-top: 2em;
+}
+
+.footer-content {
+	text-align: center;
+	max-width: 60em;
+	width: 100%;
+}
+.footer-content img {
+	transition: transform 0.3s ease;
+	border-radius: 8px;
+}
+.footer-content img:hover {
+	transform: scale(1.05);
+}</style>
+	</head>
+	<body>
+		<a href="#skip" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">
+				<svg class="brain-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M248,124a56.11,56.11,0,0,0-32-50.61V72a48,48,0,0,0-88-26.49A48,48,0,0,0,40,72v1.39a56,56,0,0,0,0,101.2V176a48,48,0,0,0,88,26.49A48,48,0,0,0,216,176v-1.41A56.09,56.09,0,0,0,248,124ZM88,208a32,32,0,0,1-31.81-28.56A55.87,55.87,0,0,0,64,180h8a8,8,0,0,0,0-16H64A40,40,0,0,1,50.67,86.27,8,8,0,0,0,56,78.73V72a32,32,0,0,1,64,0v68.26A47.8,47.8,0,0,0,88,128a8,8,0,0,0,0,16,32,32,0,0,1,0,64Zm104-44h-8a8,8,0,0,0,0,16h8a55.87,55.87,0,0,0,7.81-.56A32,32,0,1,1,168,144a8,8,0,0,0,0-16,47.8,47.8,0,0,0-32,12.26V72a32,32,0,0,1,64,0v6.73a8,8,0,0,0,5.33,7.54A40,40,0,0,1,192,164Zm16-52a8,8,0,0,1-8,8h-4a36,36,0,0,1-36-36V80a8,8,0,0,1,16,0v4a20,20,0,0,0,20,20h4A8,8,0,0,1,208,112ZM60,120H56a8,8,0,0,1,0-16h4A20,20,0,0,0,80,84V80a8,8,0,0,1,16,0v4A36,36,0,0,1,60,120Z"/></svg>
+				<span class="logo-text">MindVibe</span>
+			</a>
+			<nav>
+				<h2 class="visually-hidden">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/">Home</a></li>
+					<li class="nav-item"><a href="/about/" aria-current="page">About</a></li>
+					<li class="nav-item"><a href="/privacy/">Privacy</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="skip">
+			<div class="post-content">
+<h1>About MindVibe</h1>
+<p>MindVibe is a meditation app that transforms your iPhone into a gateway to calm. Using mesmerizing fluid gradients, MindVibe helps you relax, energize, or find focus in just 30 seconds.</p>
+<p>If you have questions or feedback, you can reach out to me by <a href="mailto:mindvibe@hop.ie">email</a> or <a href="https://mastodon.ie/@donovanh">on Mastodon</a>.
+<p>- Donovan</p>
+</div>
+
+		</main>
+
+		<footer>
+		    <div class="footer-content">
+                <p>&copy; Copyright 2024 Donovan Hutchinson</p>
+                
+            </div>
+		</footer>
+
+		<!-- Current page: /about/ -->
+	</body>
+</html>

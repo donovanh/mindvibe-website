@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>TestFlight &amp; Timers - Reps - Bodyweight Exercises</title>
+		<meta name="description" content="Some early testing, feedback and improvements">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Reps - Bodyweight Exercises">
+		<link rel="alternate" href="/feed/feed.json" type="application/json" title="Reps - Bodyweight Exercises">
+		
+		<style>/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}
+* { box-sizing: border-box; }
+/* Defaults */
+:root {
+    --font-family: -apple-system, system-ui, sans-serif;
+    --font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT,
+        Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono,
+        Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New,
+        Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+    --color-gray-20: #e0e0e0;
+    --color-gray-50: #c0c0c0;
+    --color-gray-90: #333;
+    --color-highlight: #37ff12;
+
+    --background-color: #000;
+
+    --text-color: var(--color-gray-20);
+    --text-color-link: var(--color-highlight);
+    --text-color-link-active: var(--color-highlight);
+    --text-color-link-visited: var(--color-highlight);
+
+    --syntax-tab-size: 2;
+}
+/*
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-gray-20: #e0e0e0;
+        --color-gray-50: #c0c0c0;
+        --color-gray-90: #dad8d8;
+
+        /* --text-color is assigned to --color-gray-_ above */
+        --text-color-link: var(--color-highlight);
+        --text-color-link-active: #6969f7;
+        --text-color-link-visited: #a6a6f8;
+
+        --background-color: #15202b;
+    }
+} */
+
+/* Global stylesheet */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0 auto;
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+html {
+    overflow-y: scroll;
+}
+main {
+    max-width: 60em;
+    margin: 0 auto;
+    min-height: calc(100vh - 18em);
+}
+
+
+.post-content {
+    max-width: 40em;
+    margin: 0 auto;
+}
+
+.post-list {
+    max-width: 40em;
+    margin: 0 auto;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+p {
+    line-height: 1.5;
+}
+
+li {
+    line-height: 1.5;
+}
+
+a[href] {
+    color: var(--text-color-link);
+    text-decoration: none;
+}
+a[href]:visited {
+    color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+    text-decoration: underline;
+}
+
+main {
+    padding: 1rem;
+}
+main :first-child {
+    margin-top: 0;
+}
+
+main img {
+    height: auto;
+    max-width: 100%;
+}
+
+.links-nextprev {
+    list-style: none;
+    border-top: 1px dashed var(--color-gray-20);
+    padding: 1em 0;
+}
+
+table {
+    margin: 1em 0;
+}
+table td,
+table th {
+    padding-right: 1em;
+}
+
+pre,
+code {
+    font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+    margin: 0.5em 0;
+    line-height: 1.375; /* 22px /16 */
+    -moz-tab-size: var(--syntax-tab-size);
+    -o-tab-size: var(--syntax-tab-size);
+    tab-size: var(--syntax-tab-size);
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+}
+code {
+    word-break: break-all;
+}
+
+/* Header */
+header {
+    display: flex;
+    gap: 1em 0.5em;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1em;
+    max-width: 60em;
+    margin: 0 auto;
+}
+.home-link {
+    margin-right: auto;
+}
+.home-link img {
+    width: 64px;
+    height: 64px;
+}
+.home-link:link:not(:hover) {
+    text-decoration: none;
+}
+
+/* Nav */
+.nav {
+    display: flex;
+    padding: 0;
+    margin: 0 0 0 auto;
+    list-style: none;
+}
+.nav-item {
+    display: inline-block;
+    margin-right: 1em;
+}
+.nav-item a[href]:not(:hover) {
+    text-decoration: none;
+}
+/* .nav a[href][aria-current="page"] {
+    text-decoration: underline;
+} */
+
+/* Posts list */
+.postlist {
+    list-style: none;
+    padding: 0;
+    padding-left: 1.5rem;
+}
+.postlist-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    counter-increment: start-from -1;
+    margin-bottom: 1em;
+}
+.postlist-item:before {
+    display: inline-block;
+    pointer-events: none;
+    content: "" counter(start-from, decimal-leading-zero) ". ";
+    line-height: 100%;
+    text-align: right;
+    margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+    font-size: 0.8125em; /* 13px /16 */
+    color: var(--color-gray-90);
+}
+.postlist-date {
+    word-spacing: -0.5px;
+}
+.postlist-link {
+    font-size: 1.1875em; /* 19px /16 */
+    font-weight: 700;
+    flex-basis: calc(100% - 1.5rem);
+    padding-left: 0.25em;
+    padding-right: 0.5em;
+    /* text-underline-position: from-font;
+    text-underline-offset: 0;
+    text-decoration-thickness: 1px; */
+}
+.postlist-item-active .postlist-link {
+    font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    font-style: italic;
+}
+.postlist-item > .post-tag {
+    align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.post-metadata time {
+    margin-right: 1em;
+}
+
+/* Direct Links / Markdown Headers */
+.header-anchor {
+    text-decoration: none;
+    font-style: normal;
+    font-size: 1em;
+    margin-left: 0.1em;
+}
+a[href].header-anchor,
+a[href].header-anchor:visited {
+    color: transparent;
+}
+a[href].header-anchor:focus,
+a[href].header-anchor:hover {
+    text-decoration: underline;
+}
+a[href].header-anchor:focus,
+:hover > a[href].header-anchor {
+    color: #aaa;
+}
+
+h2 + .header-anchor {
+    font-size: 1.5em;
+}
+
+.testflight-callout {
+    border: 4px solid rgba(255, 255, 255, 0.25);
+    border-radius: 1em;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2em;
+    text-align: center;
+}
+
+/* Home page */
+.home-layout {
+    display: flex;
+    align-items: center;
+    margin: 1rem auto;
+}
+
+.home-layout h1 {
+    font-size: 5em;
+    margin: 0;
+}
+
+.home-image img {
+    max-width: 295px;
+    margin: 2em 5em;
+    border: 0.25em solid #555;
+    border-radius: 2em;
+    overflow: hidden;
+}
+
+@media (max-width: 720px) {
+    .home-layout {
+        align-items: start;
+    }
+
+    .home-layout h1 {
+        font-size: 3em;
+        margin: 0;
+    }
+
+    .home-image img {
+        max-width: 120px;
+        margin: 0.5em 2em;
+        border: 0.15em solid #fff;
+        border-radius: 1em;
+    }
+}
+
+footer {
+    background: var(--color-highlight);
+    color: #000;
+    display: flex;
+    justify-content: center;
+    padding: 4em;
+    margin-top: 4em;
+}
+
+.footer-content {
+    text-align: center;
+}</style>
+	</head>
+	<body>
+		<a href="#skip" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">
+			 <img src="/img/reps-icon.png"  alt="Reps icon" />
+			</a>
+			<nav>
+				<h2 class="visually-hidden">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/">Home</a></li>
+					<li class="nav-item"><a href="/about/">About</a></li>
+					<li class="nav-item"><a href="/privacy/">Privacy</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="skip">
+			
+<div class="post-content">
+    <h1>TestFlight &amp; Timers</h1>
+
+    <ul class="post-metadata">
+    	<li><time datetime="2024-02-19">19 February 2024</time></li>
+    	<li><a href="/tags/dev/" class="post-tag">dev</a>, </li>
+    	<li><a href="/tags/dev-diary/" class="post-tag">dev-diary</a></li>
+    </ul>
+
+    <p>Last week I launched my <a href="https://apps.apple.com/app/reps-bodyweight-exercises/id6477761819">Reps app</a> on TestFlight for any curious early testers to try out. I also started using it properly myself and as a result, I've a long list of things I really want to improve right away.</p>
+<h2 id="testflight-no-testing-like-user-testing" tabindex="-1">TestFlight: No testing like user testing <a class="header-anchor" href="#testflight-no-testing-like-user-testing">#</a></h2>
+<p>No matter how much time spent going through user flows in the simulator, it's an entirely different experience using an app for real on a device. In my case, when I started using my app in the morning to log a workout, I immediately spotted a bunch of small (and large) issues.</p>
+<p>I also wanted to bring in some external testers to try to get some feedback. To do this I enrolled in <a href="https://appstoreconnect.apple.com">App Store Connect</a>, which included a €99-per-year fee, and <a href="https://developer.apple.com/documentation/xcode/distributing-your-app-for-beta-testing-and-releases">pushed an archive of my app to TestFlight</a>.</p>
+<p>The process of creating a release and then submitting it for review was fairly straightforward. One thing I needed to do was create a <a href="https://reps.hop.ie">Reps app website</a> with a <a href="https://reps.hop.ie/privacy/">privacy policy</a>. To do this I set up a quick <a href="https://www.11ty.dev">11ty</a> project and deployed it to Github Pages.</p>
+<p>I then set up a public group in App Store Connect and when my TestFlight was reviewed I could start sharing the link.</p>
+<h2 id="deploy-schedule" tabindex="-1">Deploy schedule <a class="header-anchor" href="#deploy-schedule">#</a></h2>
+<p>It's very easy to deploy new versions of apps to TestFlight. I'm glad it is because I at one point managed to push a version with an important feature commented out. I was able to expire the old version and upload a new within minutes.</p>
+<p>Generally though I'm going to aim to release a new version once every week or so, barring emergency fixes.</p>
+<h2 id="initial-feedback" tabindex="-1">Initial feedback <a class="header-anchor" href="#initial-feedback">#</a></h2>
+<p>So far I've quickly amassed a list of things I want to improve. In the first week the main issues were:</p>
+<ul>
+<li>Some late-updating quirks in the UI</li>
+<li>The &quot;Log x reps&quot; button jumps too suddenly to the next exercise, which feels jarring</li>
+<li>It's a hassle to have to leave the app to start a timer for timed exercises</li>
+</ul>
+<p>Last weekend I set out to address these issues.</p>
+<h3 id="ui-state-out-of-sync" tabindex="-1">UI state out of sync <a class="header-anchor" href="#ui-state-out-of-sync">#</a></h3>
+<p>Firstly, I refactored the way I store the UI state into one central ViewModel class for the main view. I had been tracking the state with two separate classes and trying to update them as needed, but without a central source of truth the UI was partially-updating at times. This pushes those two models into a role of background-storage and initial-state, and then my main ViewModel is responsible for keeping the current state and pushing updates into those models for storage. Seems to make things more solid.</p>
+<p>I still end up instatiating the main ViewModel and then passing it down to children views, which feels a little sub-optimal but it's working for now until I find a way to properly use the local Environment to store the class.</p>
+<h3 id="logging-reps-button" tabindex="-1">Logging reps button <a class="header-anchor" href="#logging-reps-button">#</a></h3>
+<p>To help with this issue, I wanted to make it clear when reps were being saved. I also thought it would be helpful to have a <code>Cancel</code> option, as I've been hearing a lot about phantom clicks from Vision Pro users, and this can easily happen on any touch devices.</p>
+<p>To address this, I added a <code>Task</code> to the saving action that sets <code>isSavingReps</code> to true, while awaiting a timer for a couple of seconds. During this time it'll show a saving message (maybe an icon later) along with a <code>Cancel</code> button. Hitting cancel stops the Task before it progresses to the save action.</p>
+<div class="video-wrapper">
+    <video autoplay muted loop playsinline width="300">
+    <source src="https://i.imgur.com/oP7BiI2.mp4" type="video/mp4">
+    </video>
+</video>
+<p>I think this improves the feel of adding reps.</p>
+<h3 id="timed-exercises" tabindex="-1">Timed exercises <a class="header-anchor" href="#timed-exercises">#</a></h3>
+<p>This was a big one. I found it was less than ideal to have to leave the app to start a timer when recording timed exercises. To fix this, I built a timer function into the exercise record view.</p>
+<div style="max-width: 300px"><picture><source type="image/avif" srcset="/img/I2G_fYqqjw-692.avif 692w"><source type="image/webp" srcset="/img/I2G_fYqqjw-692.webp 692w"><img alt="Timer view" loading="lazy" decoding="async" src="/img/I2G_fYqqjw-692.png" width="692" height="622"></picture></div>
+<p>This one was complex enough to require it's own ViewModel. I wanted to manage a few things - the accrued time both as a countdown until the target time was reached, and then counting upward, as well as a count-in of 5 seconds before the timer starts timing.</p>
+<p>To do this I have two timers, with a reset option that you can call either by pressing reset or tapping the count-in while it's underway.</p>
+<div class="video-wrapper">
+    <video autoplay muted loop playsinline width="300">
+    <source src="https://i.imgur.com/I3nM0di.mp4" type="video/mp4">
+    </video>
+</video>
+<p>Once you stop the timer, it gives the option to then log the number of seconds recorded. You can also jump across to the manual view and record the number of seconds there if you prefer.</p>
+<p>Lastly I added some sounds to indicate when the count-in was happening, when the timer starts, and when the target time is achieved. Of all the interactions, I think this is one that benefits from having some sounds as you might not be looking at the timer when doing a handstand, for example.</p>
+<p>I grabbed some free sounds from <a href="https://kenney.nl">Kenney.nl</a> and they seem ok for now.</p>
+<p>It's good enough as a first version, but I see a few gaps I really need to tidy up to make it feel more complete.</p>
+<h2 id="current-todo-list" tabindex="-1">Current TODO list <a class="header-anchor" href="#current-todo-list">#</a></h2>
+<p>I've since picked up a bunch more items for the TODO list. Some highlights that I hope to work on this week:</p>
+<ul>
+<li>UI fixes: Place the &quot;Set 1 of 2&quot; text closer to the reps number</li>
+<li>Add the <code>Saving...</code> flow for measured seconds</li>
+<li>Add plus and minus beside the log button to adjust the measured seconds</li>
+<li>Improve the animation between exercises (it's a bit choppy)</li>
+<li>... and a bunch of small UI tweaks</li>
+</ul>
+<p>Thanks for reading, and if you want to see my app as it is built, you can <a href="https://apps.apple.com/app/reps-bodyweight-exercises/id6477761819">try Reps for free</a>.</p>
+
+    <ul class="links-nextprev"><li>Previous: <a href="/dev-diary-01/">Reps app idea and initial build</a></li><li>Next: <a href="/dev-diary-03/">iCloud and screen sizes</a></li>
+    </ul>
+</div>
+
+		</main>
+
+		<footer>
+		    <div class="footer-content">
+                <p>&copy; Copyright 2024 Donovan Hutchinson</p>
+                <p>
+                    <a href="https://apps.apple.com/app/reps-bodyweight-exercises/id6477761819">
+                   	    <img src="/img/download.svg" alt="Download Reps on the app store"/>
+                    </a>
+                </p>
+            </div>
+		</footer>
+
+		<!-- Current page: /dev-diary-02/ -->
+	</body>
+</html>
