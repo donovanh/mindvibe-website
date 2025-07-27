@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="{{ metadata.language }}">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{{title}} - {{ metadata.title }}</title>
+		<meta name="description" content="{{ description or metadata.description }}">
+		<meta name="author" content="{{ metadata.author.name }}">
+		<meta name="theme-color" content="#667eea">
+		<link rel="canonical" href="{{ metadata.url }}{{ page.url }}">
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="{{ metadata.url }}{{ page.url }}">
+		<meta property="og:title" content="{{ title or metadata.title }}">
+		<meta property="og:description" content="{{ description or metadata.description }}">
+		<meta property="og:image" content="{{ metadata.url }}/img/main-app.png">
+		<meta property="og:site_name" content="{{ metadata.title }}">
+		
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image">
+		<meta property="twitter:url" content="{{ metadata.url }}{{ page.url }}">
+		<meta property="twitter:title" content="{{ title or metadata.title }}">
+		<meta property="twitter:description" content="{{ description or metadata.description }}">
+		<meta property="twitter:image" content="{{ metadata.url }}/img/main-app.png">
+		
+		<!-- iOS Web App -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="apple-mobile-web-app-title" content="{{ metadata.title }}">
+
+		{#- Atom and JSON feeds included by default #}
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
+		<link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
+
+		{#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
+		{#- <meta name="generator" content="{{ eleventy.generator }}"> #}
+
+		{#-
+		CSS bundles are provided via the `eleventy-plugin-bundle` plugin:
+		1. You can add to them using `{% css %}`
+		2. You can get from them using `{% getBundle "css" %}` or `{% getBundleFileUrl "css" %}`
+		3. You can do the same for JS: {% js %}{% endjs %} and <script>{% getBundle "js" %}</script>
+		4. Learn more: https://github.com/11ty/eleventy-plugin-bundle
+		#}
+
+		{#- Add an arbitrary string to the bundle #}
+		{%- css %}* { box-sizing: border-box; }{% endcss %}
+		{#- Add the contents of a file to the bundle #}
+		{%- css %}{% include "public/css/index.css" %}{% endcss %}
+		{#- Or add from node_modules #}
+		{# {%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %} #}
+
+		{#- Render the CSS bundle using Inlined CSS (for the fastest site performance in production) #}
+		<style>{% getBundle "css" %}</style>
+		{#- Renders the CSS bundle using a separate file, if you can't set CSP directive style-src: 'unsafe-inline' #}
+		{#- <link rel="stylesheet" href="{% getBundleFileUrl "css" %}"> #}
+	</head>
+	<body>
+		<a href="#skip" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">
+				<svg class="brain-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M248,124a56.11,56.11,0,0,0-32-50.61V72a48,48,0,0,0-88-26.49A48,48,0,0,0,40,72v1.39a56,56,0,0,0,0,101.2V176a48,48,0,0,0,88,26.49A48,48,0,0,0,216,176v-1.41A56.09,56.09,0,0,0,248,124ZM88,208a32,32,0,0,1-31.81-28.56A55.87,55.87,0,0,0,64,180h8a8,8,0,0,0,0-16H64A40,40,0,0,1,50.67,86.27,8,8,0,0,0,56,78.73V72a32,32,0,0,1,64,0v68.26A47.8,47.8,0,0,0,88,128a8,8,0,0,0,0,16,32,32,0,0,1,0,64Zm104-44h-8a8,8,0,0,0,0,16h8a55.87,55.87,0,0,0,7.81-.56A32,32,0,1,1,168,144a8,8,0,0,0,0-16,47.8,47.8,0,0,0-32,12.26V72a32,32,0,0,1,64,0v6.73a8,8,0,0,0,5.33,7.54A40,40,0,0,1,192,164Zm16-52a8,8,0,0,1-8,8h-4a36,36,0,0,1-36-36V80a8,8,0,0,1,16,0v4a20,20,0,0,0,20,20h4A8,8,0,0,1,208,112ZM60,120H56a8,8,0,0,1,0-16h4A20,20,0,0,0,80,84V80a8,8,0,0,1,16,0v4A36,36,0,0,1,60,120Z"/></svg>
+				<span class="logo-text">MindVibe</span>
+			</a>
+
+			{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
+			<nav>
+				<h2 class="visually-hidden">Top level navigation menu</h2>
+				<ul class="nav">
+				{%- for entry in collections.all | eleventyNavigation %}
+					<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
+				{%- endfor %}
+				</ul>
+			</nav>
+		</header>
+
+		<main id="skip">
+			{{ content | safe }}
+		</main>
+
+		<footer>
+		    <div class="footer-content">
+                <p>&copy; Copyright 2024 Donovan Hutchinson</p>
+                {% if metadata.appLink %}<p>
+                    <a href="{{metadata.appLink}}">
+                   	    <img src="/img/download.svg" alt="Download MindVibe on the app store"/>
+                    </a>
+                </p>
+								{% endif %}
+            </div>
+		</footer>
+
+		<!-- Current page: {{ page.url | htmlBaseUrl }} -->
+	</body>
+</html>

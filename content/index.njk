@@ -1,0 +1,57 @@
+---
+title: MindVibe - Transform Your Mind with Color
+layout: layouts/home.njk
+eleventyNavigation:
+  key: Home
+  order: 1
+---
+
+<div class="home-layout">
+    <div class="home-image">
+        {% if metadata.appLink %}
+        <a href="{{metadata.appLink}}">
+            {% image "../public/img/main-app.png", "MindVibe main interface" %}
+            {% image "../public/img/modes.PNG", "Different mood modes" %}
+            {% image "../public/img/widget.jpg", "Home screen widget" %}
+        </a>
+        {% else %}
+        {% image "../public/img/main-app.png", "MindVibe main interface" %}
+        {% image "../public/img/modes.PNG", "Different mood modes" %}
+        {% image "../public/img/widget.jpg", "Home screen widget" %}
+        {% endif %}
+    </div>
+
+    <div class="home-content">
+        <h2>Relax, unwind, or wake up your mind</h2>
+
+        <p>Break free from the endless scroll and transform your iPhone into a gateway to calm. MindVibe
+        uses scientifically-backed color psychology and mesmerizing fluid gradients to help you relax,
+        energize, or find focus in just 30 seconds.</p>
+
+        <h3>Choose the mood that suits you</h3>
+
+        <p>Each mode is carefully designed using proven color psychology principles:</p>
+
+        <ul>
+            <li>Ocean & Forest - Cool blues and greens naturally lower cortisol and heart rate</li>
+            <li>Sunset & Aurora - Warm purples and pinks promote emotional balance</li>
+            <li>Energize - Dynamic reds and yellows stimulate alertness and motivation</li>
+            <li>Zen - Neutral grays create mental clarity and reduce overstimulation</li>
+        </ul>
+
+        <h3>What Makes MindVibe Special</h3>
+
+        <ul>
+            <li>Science-Based Design - Each color mode targets specific psychological states backed by color
+        therapy research</li>
+            <li>Instant Impact - Feel the effects in seconds, not minutes</li>
+            <li>Mindful Alternative - Replace harmful screen habits with restorative visual experiences</li>
+            <li>Premium Experience - Unlock all 7 modes including Ocean, Sunset, Forest, and Aurora</li>
+            <li>Seamless Integration - Home screen widgets for instant access to your favorite modes</li>
+        </ul>
+
+        {% if metadata.appLink %}
+            <a href="{{metadata.appLink}}"><img src="/img/download.svg" alt="Download MindVibe on the app store"/></a>
+        {% endif %}
+    </div>
+</div>
