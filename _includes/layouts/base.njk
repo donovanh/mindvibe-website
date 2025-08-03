@@ -98,6 +98,9 @@
 				{%- for entry in collections.all | eleventyNavigation %}
 					<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
 				{%- endfor %}
+				{% if metadata.appLink %}
+          <li class="nav-item store-link"><a href="{{metadata.appLink}}"><img src="/img/download.svg" alt="Get Instant Stress Relief - Download MindVibe"/></a></li>
+        {% endif %}
 				</ul>
 			</nav>
 		</header>

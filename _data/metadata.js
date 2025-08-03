@@ -1,6 +1,7 @@
 module.exports = {
 	title: "MindVibe",
-	appLink: "",
+	appLink:
+		"https://apps.apple.com/app/mindvibe-30-second-meditation/id6749019720",
 	url: "https://mindvibe.hop.ie/",
 	language: "en",
 	description:
