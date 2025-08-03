@@ -1,7 +1,7 @@
 ---
 title: Why I built a 30-second meditation app for people who don't have time to meditate
 permalink: /why-i-built-mindvibe/
-description: Why I created MindVibe
+description: The story behind building MindVibe, a 30-second meditation app designed for busy professionals who need stress relief but don't have time for traditional meditation apps.
 date: 2025-08-04
 tags:
   - dev
