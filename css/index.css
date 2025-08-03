@@ -224,7 +224,7 @@ header {
 }
 .nav-item {
 	display: inline-block;
-	margin-right: 1em;
+	margin-right: 1.25em;
 }
 .nav-item:last-child {
 	margin-right: 0;
@@ -234,6 +234,9 @@ header {
 }
 .nav a[href][aria-current="page"] {
 	text-decoration: underline;
+}
+.nav-item.store-link {
+	margin-top: -0.5rem;
 }
 
 /* Direct Links / Markdown Headers */

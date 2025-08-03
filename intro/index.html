@@ -3,25 +3,25 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Privacy - MindVibe</title>
-		<meta name="description" content="Transform your iPhone into a gateway to calm with MindVibe - the meditation app that uses color.">
+		<title>Introducing MindVibe - MindVibe</title>
+		<meta name="description" content="Why I created MindVibe">
 		<meta name="author" content="Donovan Hutchinson">
 		<meta name="theme-color" content="#667eea">
-		<link rel="canonical" href="https://mindvibe.hop.ie//privacy/">
+		<link rel="canonical" href="https://mindvibe.hop.ie//intro/">
 		
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website">
-		<meta property="og:url" content="https://mindvibe.hop.ie//privacy/">
-		<meta property="og:title" content="Privacy">
-		<meta property="og:description" content="Transform your iPhone into a gateway to calm with MindVibe - the meditation app that uses color.">
+		<meta property="og:url" content="https://mindvibe.hop.ie//intro/">
+		<meta property="og:title" content="Introducing MindVibe">
+		<meta property="og:description" content="Why I created MindVibe">
 		<meta property="og:image" content="https://mindvibe.hop.ie//img/main-app.png">
 		<meta property="og:site_name" content="MindVibe">
 		
 		<!-- Twitter -->
 		<meta property="twitter:card" content="summary_large_image">
-		<meta property="twitter:url" content="https://mindvibe.hop.ie//privacy/">
-		<meta property="twitter:title" content="Privacy">
-		<meta property="twitter:description" content="Transform your iPhone into a gateway to calm with MindVibe - the meditation app that uses color.">
+		<meta property="twitter:url" content="https://mindvibe.hop.ie//intro/">
+		<meta property="twitter:title" content="Introducing MindVibe">
+		<meta property="twitter:description" content="Why I created MindVibe">
 		<meta property="twitter:image" content="https://mindvibe.hop.ie//img/main-app.png">
 		
 		<!-- iOS Web App -->
@@ -57,7 +57,175 @@
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="MindVibe">
 		<link rel="alternate" href="/feed/feed.json" type="application/json" title="MindVibe">
 		
-		<style>* { box-sizing: border-box; }
+		<style>/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}
+* { box-sizing: border-box; }
 /* Defaults */
 :root {
 	--font-family: -apple-system, system-ui, sans-serif;
@@ -284,7 +452,7 @@ header {
 }
 .nav-item {
 	display: inline-block;
-	margin-right: 1.25em;
+	margin-right: 1em;
 }
 .nav-item:last-child {
 	margin-right: 0;
@@ -294,9 +462,6 @@ header {
 }
 .nav a[href][aria-current="page"] {
 	text-decoration: underline;
-}
-.nav-item.store-link {
-	margin-top: -0.5rem;
 }
 
 /* Direct Links / Markdown Headers */
@@ -644,10 +809,7 @@ footer {
 					<li class="nav-item"><a href="/">Home</a></li>
 					<li class="nav-item"><a href="/about/">About</a></li>
 					<li class="nav-item"><a href="/blog/">Blog</a></li>
-					<li class="nav-item"><a href="/privacy/" aria-current="page">Privacy</a></li>
-				
-          <li class="nav-item store-link"><a href="https://apps.apple.com/app/mindvibe-30-second-meditation/id6749019720"><img src="/img/download.svg" alt="Get Instant Stress Relief - Download MindVibe"/></a></li>
-        
+					<li class="nav-item"><a href="/privacy/">Privacy</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -655,30 +817,28 @@ footer {
 		<main id="skip">
 			
 <div class="post-content">
-<h1 id="privacy-policy">Privacy Policy</h1>
-<p>This application does not collect, use, save or have access to any personal data recorded in the application.</p>
-<h2 id="usage-monitoring">Usage monitoring</h2>
-<p>The application does not contain any tracking or monitoring.</p>
-<p>Should this change, this policy will be updated to reflect any data collected, whether any of it is identifiable, and how requests for it to be erased can be handled.</p>
-<h2 id="questions">Questions</h2>
-<p>Any questions or messages can be directed to <a href="mailto:mindvibe@hop.ie">mindvibe@hop.ie</a>.</p>
-</div>
+    <h1>Introducing MindVibe</h1>
 
+    <ul class="post-metadata">
+    	<li><time datetime="2025-08-04">04 August 2025</time></li>
+    	<li><a href="/tags/dev/" class="post-tag">dev</a>, </li>
+    	<li><a href="/tags/dev-diary/" class="post-tag">dev-diary</a></li>
+    </ul>
+
+    <h2 id="todo" tabindex="-1">TODO <a class="header-anchor" href="#todo">#</a></h2>
+<p>Content here</p>
+
+</div>
 
 		</main>
 
 		<footer>
 		    <div class="footer-content">
                 <p>&copy; Copyright 2024 Donovan Hutchinson</p>
-                <p>
-                    <a href="https://apps.apple.com/app/mindvibe-30-second-meditation/id6749019720">
-                   	    <img src="/img/download.svg" alt="Download MindVibe on the app store"/>
-                    </a>
-                </p>
-								
+                
             </div>
 		</footer>
 
-		<!-- Current page: /privacy/ -->
+		<!-- Current page: /intro/ -->
 	</body>
 </html>

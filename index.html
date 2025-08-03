@@ -284,7 +284,7 @@ header {
 }
 .nav-item {
 	display: inline-block;
-	margin-right: 1em;
+	margin-right: 1.25em;
 }
 .nav-item:last-child {
 	margin-right: 0;
@@ -294,6 +294,9 @@ header {
 }
 .nav a[href][aria-current="page"] {
 	text-decoration: underline;
+}
+.nav-item.store-link {
+	margin-top: -0.5rem;
 }
 
 /* Direct Links / Markdown Headers */
@@ -640,7 +643,11 @@ footer {
 				<ul class="nav">
 					<li class="nav-item"><a href="/" aria-current="page">Home</a></li>
 					<li class="nav-item"><a href="/about/">About</a></li>
+					<li class="nav-item"><a href="/blog/">Blog</a></li>
 					<li class="nav-item"><a href="/privacy/">Privacy</a></li>
+				
+          <li class="nav-item store-link"><a href="https://apps.apple.com/app/mindvibe-30-second-meditation/id6749019720"><img src="/img/download.svg" alt="Get Instant Stress Relief - Download MindVibe"/></a></li>
+        
 				</ul>
 			</nav>
 		</header>
@@ -651,9 +658,11 @@ footer {
 <div class="home-layout">
     <div class="home-image">
         
-        <picture><source type="image/avif" srcset="/img/TEHFN3HiZy-1179.avif 1179w"><source type="image/webp" srcset="/img/TEHFN3HiZy-1179.webp 1179w"><img alt="MindVibe main interface" loading="lazy" decoding="async" src="/img/TEHFN3HiZy-1179.png" width="1179" height="2556"></picture>
-        <picture><source type="image/avif" srcset="/img/ICMlVVIhPb-1179.avif 1179w"><source type="image/webp" srcset="/img/ICMlVVIhPb-1179.webp 1179w"><img alt="Different mood modes" loading="lazy" decoding="async" src="/img/ICMlVVIhPb-1179.png" width="1179" height="2556"></picture>
-        <picture><source type="image/avif" srcset="/img/3OWSP1qsJl-1179.avif 1179w"><source type="image/webp" srcset="/img/3OWSP1qsJl-1179.webp 1179w"><img alt="Home screen widget" loading="lazy" decoding="async" src="/img/3OWSP1qsJl-1179.jpeg" width="1179" height="636"></picture>
+        <a href="https://apps.apple.com/app/mindvibe-30-second-meditation/id6749019720">
+            <picture><source type="image/avif" srcset="/img/TEHFN3HiZy-1179.avif 1179w"><source type="image/webp" srcset="/img/TEHFN3HiZy-1179.webp 1179w"><img alt="MindVibe main interface" loading="lazy" decoding="async" src="/img/TEHFN3HiZy-1179.png" width="1179" height="2556"></picture>
+            <picture><source type="image/avif" srcset="/img/ICMlVVIhPb-1179.avif 1179w"><source type="image/webp" srcset="/img/ICMlVVIhPb-1179.webp 1179w"><img alt="Different mood modes" loading="lazy" decoding="async" src="/img/ICMlVVIhPb-1179.png" width="1179" height="2556"></picture>
+            <picture><source type="image/avif" srcset="/img/3OWSP1qsJl-1179.avif 1179w"><source type="image/webp" srcset="/img/3OWSP1qsJl-1179.webp 1179w"><img alt="Home screen widget" loading="lazy" decoding="async" src="/img/3OWSP1qsJl-1179.jpeg" width="1179" height="636"></picture>
+        </a>
         
     </div>
 
@@ -716,6 +725,8 @@ footer {
         -->
 
         
+            <a href="https://apps.apple.com/app/mindvibe-30-second-meditation/id6749019720"><img src="/img/download.svg" alt="Get Instant Stress Relief - Download MindVibe"/></a>
+        
     </div>
 </div>
 
@@ -725,7 +736,12 @@ footer {
 		<footer>
 		    <div class="footer-content">
                 <p>&copy; Copyright 2024 Donovan Hutchinson</p>
-                
+                <p>
+                    <a href="https://apps.apple.com/app/mindvibe-30-second-meditation/id6749019720">
+                   	    <img src="/img/download.svg" alt="Download MindVibe on the app store"/>
+                    </a>
+                </p>
+								
             </div>
 		</footer>
 

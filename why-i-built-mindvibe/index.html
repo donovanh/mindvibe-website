@@ -3,25 +3,25 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Privacy - MindVibe</title>
-		<meta name="description" content="Transform your iPhone into a gateway to calm with MindVibe - the meditation app that uses color.">
+		<title>Why I built a 30-second meditation app for people who don&#39;t have time to meditate - MindVibe</title>
+		<meta name="description" content="Why I created MindVibe">
 		<meta name="author" content="Donovan Hutchinson">
 		<meta name="theme-color" content="#667eea">
-		<link rel="canonical" href="https://mindvibe.hop.ie//privacy/">
+		<link rel="canonical" href="https://mindvibe.hop.ie//why-i-built-mindvibe/">
 		
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website">
-		<meta property="og:url" content="https://mindvibe.hop.ie//privacy/">
-		<meta property="og:title" content="Privacy">
-		<meta property="og:description" content="Transform your iPhone into a gateway to calm with MindVibe - the meditation app that uses color.">
+		<meta property="og:url" content="https://mindvibe.hop.ie//why-i-built-mindvibe/">
+		<meta property="og:title" content="Why I built a 30-second meditation app for people who don&#39;t have time to meditate">
+		<meta property="og:description" content="Why I created MindVibe">
 		<meta property="og:image" content="https://mindvibe.hop.ie//img/main-app.png">
 		<meta property="og:site_name" content="MindVibe">
 		
 		<!-- Twitter -->
 		<meta property="twitter:card" content="summary_large_image">
-		<meta property="twitter:url" content="https://mindvibe.hop.ie//privacy/">
-		<meta property="twitter:title" content="Privacy">
-		<meta property="twitter:description" content="Transform your iPhone into a gateway to calm with MindVibe - the meditation app that uses color.">
+		<meta property="twitter:url" content="https://mindvibe.hop.ie//why-i-built-mindvibe/">
+		<meta property="twitter:title" content="Why I built a 30-second meditation app for people who don&#39;t have time to meditate">
+		<meta property="twitter:description" content="Why I created MindVibe">
 		<meta property="twitter:image" content="https://mindvibe.hop.ie//img/main-app.png">
 		
 		<!-- iOS Web App -->
@@ -57,7 +57,175 @@
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="MindVibe">
 		<link rel="alternate" href="/feed/feed.json" type="application/json" title="MindVibe">
 		
-		<style>* { box-sizing: border-box; }
+		<style>/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}
+* { box-sizing: border-box; }
 /* Defaults */
 :root {
 	--font-family: -apple-system, system-ui, sans-serif;
@@ -644,7 +812,7 @@ footer {
 					<li class="nav-item"><a href="/">Home</a></li>
 					<li class="nav-item"><a href="/about/">About</a></li>
 					<li class="nav-item"><a href="/blog/">Blog</a></li>
-					<li class="nav-item"><a href="/privacy/" aria-current="page">Privacy</a></li>
+					<li class="nav-item"><a href="/privacy/">Privacy</a></li>
 				
           <li class="nav-item store-link"><a href="https://apps.apple.com/app/mindvibe-30-second-meditation/id6749019720"><img src="/img/download.svg" alt="Get Instant Stress Relief - Download MindVibe"/></a></li>
         
@@ -655,15 +823,35 @@ footer {
 		<main id="skip">
 			
 <div class="post-content">
-<h1 id="privacy-policy">Privacy Policy</h1>
-<p>This application does not collect, use, save or have access to any personal data recorded in the application.</p>
-<h2 id="usage-monitoring">Usage monitoring</h2>
-<p>The application does not contain any tracking or monitoring.</p>
-<p>Should this change, this policy will be updated to reflect any data collected, whether any of it is identifiable, and how requests for it to be erased can be handled.</p>
-<h2 id="questions">Questions</h2>
-<p>Any questions or messages can be directed to <a href="mailto:mindvibe@hop.ie">mindvibe@hop.ie</a>.</p>
-</div>
+    <h1>Why I built a 30-second meditation app for people who don&#39;t have time to meditate</h1>
+    
+    <p>Last month I found myself staring at my phone during a particularly stressful work day, scrolling through the usual apps looking for something that might help me reset. I had about thirty seconds before my next meeting, and the traditional meditation apps wanted me to commit to ten minutes minimum. That disconnect got me thinking about a different approach.</p>
+<p>I've been building iOS apps for a while now, and I kept running into the same problem with wellness apps: they assume you have time. The reality is that when you're dealing with work stress, you often need relief right now, not after finding twenty minutes to sit quietly somewhere.</p>
+<h2 id="the-problem-with-traditional-meditation-apps" tabindex="-1">The Problem With Traditional Meditation Apps <a class="header-anchor" href="#the-problem-with-traditional-meditation-apps">#</a></h2>
+<p>The idea for <a href="https://apps.apple.com/app/mindvibe-30-second-meditation/id6749019720">MindVibe</a> came from combining two things I'd been researching. First, the growing body of research around color psychology and its effects on stress levels. Studies show that certain color combinations can measurably reduce cortisol and heart rate within seconds. Second, the observation that most people who need stress relief the most are the least likely to use traditional meditation apps consistently.</p>
+<blockquote>
+<p>&quot;When you're dealing with work stress, you often need relief right now, not after finding twenty minutes to sit quietly somewhere.&quot;</p>
+</blockquote>
+<p>I wanted to test whether you could create something genuinely helpful in the time it takes to check a text message. The concept was simple: use fluid color gradients based on color therapy research to trigger specific psychological states. Ocean blues and forest greens to lower stress hormones. Warm sunset colors for emotional balance. Dynamic reds and yellows when you need energy.</p>
+<h2 id="building-something-that-actually-works-in-30-seconds" tabindex="-1">Building Something That Actually Works in 30 Seconds <a class="header-anchor" href="#building-something-that-actually-works-in-30-seconds">#</a></h2>
+<p>The technical approach ended up being more interesting than I initially expected. Creating smooth, mesmerizing gradients that actually feel calming required experimenting with different animation curves and color transitions. I spent quite a bit of time getting the timing right. Too fast and it feels jarring, too slow and you lose the immediacy that makes the whole concept work.</p>
+<p>What I discovered during development was that the constraint of thirty seconds actually made the app better, not worse. It forced me to focus on what really matters for stress relief: the immediate physiological response to color and movement. No complicated breathing instructions, no guided narratives, just something that works with how our brains are wired to respond to visual stimuli.</p>
+<blockquote>
+<p>&quot;The constraint of thirty seconds actually made the app better, not worse. It forced me to focus on what really matters for stress relief.&quot;</p>
+</blockquote>
+<h2 id="making-it-work-for-real-people" tabindex="-1">Making It Work for Real People <a class="header-anchor" href="#making-it-work-for-real-people">#</a></h2>
+<p>The business model came together around the idea that if something genuinely helps people during their workday, they'll pay for it. I made the core stress-relief modes free (ocean and zen) but premium unlocks all seven modes plus widget access. The goal was to make it easy to try, and valuable enough that busy professionals would find the upgrade worthwhile.</p>
+<p>I'm launching with a focus on people who've tried meditation apps before but couldn't make them stick. The feedback so far suggests there's something here. Users mention that they actually remember to use it because it fits into their existing habits rather than requiring new ones.</p>
+<h2 id="what-i-m-learning-about-wellness-apps" tabindex="-1">What I'm Learning About Wellness Apps <a class="header-anchor" href="#what-i-m-learning-about-wellness-apps">#</a></h2>
+<p>The next phase involves seeing whether this approach resonates with a broader audience. I'll be sharing more about the launch process and what I learn about building wellness apps that work with people's schedules instead of against them.</p>
+<p>Worth keeping in mind that this is still an experiment. The core question is whether you can deliver meaningful stress relief in the time it takes to glance at your phone. Based on the initial response, I think the answer might be yes.</p>
+<blockquote>
+<p>&quot;The core question is whether you can deliver meaningful stress relief in the time it takes to glance at your phone.&quot;</p>
+</blockquote>
+<p>If you're someone who's struggled to find time for traditional meditation but still feels the effects of daily stress, I'd be curious to hear what you think. Sometimes the best solutions are the ones that meet us where we already are, rather than asking us to become someone we're not.</p>
+<p>You can <a href="https://apps.apple.com/app/mindvibe-30-second-meditation/id6749019720">try MindVibe</a> and see if thirty seconds really can make a difference in your day.</p>
 
+</div>
 
 		</main>
 
@@ -679,6 +867,6 @@ footer {
             </div>
 		</footer>
 
-		<!-- Current page: /privacy/ -->
+		<!-- Current page: /why-i-built-mindvibe/ -->
 	</body>
 </html>
